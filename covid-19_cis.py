@@ -18,3 +18,8 @@ if __name__ == '__main__':
     for i in countries:
         x = threading.Thread(target=wiki_parsing,args=(i,))
         x.start()
+
+
+
+
+
