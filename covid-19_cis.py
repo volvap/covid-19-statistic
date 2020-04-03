@@ -11,7 +11,7 @@ def wiki_parsing(main_str):
     pattern_string = r"(?<="+ main_str + r"\").\b.{1,200}\b"
     cis_countries = re.search(pattern_string,str(get_request.content))
     temp_content = str(cis_countries.group(0))
-    cis_digit = re.search(r"(?<=n<td>).\d{1,10}",temp_content)
+    cis_digit = re.search(r"(?<=n<td>).(?:\d{0,10},\d{1,10}|\d{1,10})",temp_content)
     print(f"In {main_str} right now infected {cis_digit.group(0)} people")
 
 if __name__ == '__main__':
