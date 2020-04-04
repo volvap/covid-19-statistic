@@ -4,7 +4,7 @@ import re
 
 
 page_link = "https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic"
-countries = ['Belarus','Ukraine','Russia']
+countries = ['Belarus','Ukraine','Russia','Poland','Lithuania']
 
 def wiki_parsing(main_str):
     get_request = requests.get(page_link)
